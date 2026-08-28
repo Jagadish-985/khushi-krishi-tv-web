@@ -62,7 +62,12 @@ export default function Header() {
           >
             Videos
           </a>
-          <a href="#" className="hover:text-primary-green">Programs</a>
+          <a
+            href="/programs"
+            className={`hover:text-primary-green ${pathname.startsWith('/programs') ? 'font-bold text-dark-green border-b-2 border-dark-green pb-1' : ''}`}
+          >
+            Programs
+          </a>
           <a href="#" className="hover:text-primary-green">More</a>
         </nav>
         <div className="flex items-center gap-3">
