@@ -38,6 +38,14 @@ public class ArticlesController : ControllerBase
         return Ok(article);
     }
 
+    // GET: api/articles/category/{categoryName}
+    [HttpGet("category/{categoryName}")]
+    public IActionResult GetByCategory(string categoryName)
+    {
+        var articles = _mongo.Articles.Find(a => a.Category == categoryName).ToList();
+        return Ok(articles);
+    }
+
     // POST: api/articles
     [HttpPost]
     public IActionResult Create(Article article)

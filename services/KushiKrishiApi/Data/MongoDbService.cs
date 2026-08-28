@@ -11,4 +11,5 @@ public class MongoDbService
     }
 
     public IMongoCollection<Article> Articles => _database.GetCollection<Article>("Articles");
+    public IMongoCollection<Category> Categories => _database.GetCollection<Category>("Categories");
 }
