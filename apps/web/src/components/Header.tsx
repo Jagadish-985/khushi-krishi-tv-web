@@ -38,7 +38,12 @@ export default function Header() {
           >
             Agriculture
           </a>
-          <a href="#" className="hover:text-primary-green">Sandalwood</a>
+          <a
+            href="/sandalwood"
+            className={`hover:text-primary-green ${pathname === '/sandalwood' ? 'font-bold text-dark-green border-b-2 border-dark-green pb-1' : ''}`}
+          >
+            Sandalwood
+          </a>
           <a href="#" className="hover:text-primary-green">Market</a>
           <a href="#" className="hover:text-primary-green">Schemes</a>
           <a href="#" className="hover:text-primary-green">Videos</a>
