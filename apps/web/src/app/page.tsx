@@ -79,7 +79,7 @@ export default async function Home() {
         <div className="bg-white p-[12px] rounded-lg h-fit">
           <div className="flex items-center justify-between mb-4">
             <h3 className="text-lg font-bold text-gray-900">Latest News</h3>
-            <a href="#" className="text-sm font-medium text-primary-green hover:underline">
+            <a href="/news" className="text-sm font-medium text-primary-green hover:underline">
               View All
             </a>
           </div>
@@ -101,19 +101,19 @@ export default async function Home() {
       <div className="mx-[64px] mt-6">
         <div className="grid grid-cols-5 gap-[24px]">
           {[
-            { num: '1', title: 'Agriculture', desc: 'Latest farming techniques' },
-            { num: '2', title: 'Sandalwood', desc: 'Cultivation & market' },
-            { num: '3', title: 'Market Updates', desc: 'Daily commodity prices' },
-            { num: '4', title: 'Government Schemes', desc: 'Farmer welfare programs' },
-            { num: '5', title: 'Videos', desc: 'Educational content' },
+            { num: '1', title: 'Agriculture', desc: 'Latest farming techniques', href: '/news?category=Agriculture' },
+            { num: '2', title: 'Sandalwood', desc: 'Cultivation & market', href: '/news?category=Sandalwood' },
+            { num: '3', title: 'Market Updates', desc: 'Daily commodity prices', href: '/news?category=Market' },
+            { num: '4', title: 'Government Schemes', desc: 'Farmer welfare programs', href: '/news?category=Schemes' },
+            { num: '5', title: 'Videos', desc: 'Educational content', href: '/news?category=Videos' },
           ].map((cat) => (
-            <div key={cat.num} className="bg-white p-[12px] rounded-lg border border-gray-200 hover:border-primary-green cursor-pointer">
+            <a key={cat.num} href={cat.href} className="bg-white p-[12px] rounded-lg border border-gray-200 hover:border-primary-green cursor-pointer block">
               <div className="w-8 h-8 bg-primary-green text-white rounded-full flex items-center justify-center font-bold mb-2">
                 {cat.num}
               </div>
               <h4 className="font-semibold text-gray-900 mb-1">{cat.title}</h4>
               <p className="text-xs text-gray-600">{cat.desc}</p>
-            </div>
+            </a>
           ))}
         </div>
       </div>
