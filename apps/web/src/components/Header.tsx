@@ -27,6 +27,12 @@ export default function Header() {
             Home
           </a>
           <a
+            href="/search"
+            className={`hover:text-primary-green ${pathname === '/search' ? 'font-bold text-dark-green border-b-2 border-dark-green pb-1' : ''}`}
+          >
+            Search
+          </a>
+          <a
             href="/news"
             className={`hover:text-primary-green ${pathname === '/news' ? 'font-bold text-dark-green border-b-2 border-dark-green pb-1' : ''}`}
           >
