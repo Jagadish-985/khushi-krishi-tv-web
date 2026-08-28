@@ -80,9 +80,12 @@ export default function Header() {
           <button className="px-4 py-2 text-sm font-medium text-gray-700 border border-gray-300 rounded-lg hover:bg-gray-50">
             ಕನ್ನಡ
           </button>
-          <button className="px-4 py-2 text-sm font-bold text-white bg-live-blue rounded-lg hover:bg-blue-700">
+          <a
+            href="/live"
+            className="px-4 py-2 text-sm font-bold text-white bg-live-blue rounded-lg hover:bg-blue-700"
+          >
             LIVE TV
-          </button>
+          </a>
         </div>
       </div>
     </header>
