@@ -50,7 +50,12 @@ export default function Header() {
           >
             Market
           </a>
-          <a href="#" className="hover:text-primary-green">Schemes</a>
+          <a
+            href="/schemes"
+            className={`hover:text-primary-green ${pathname === '/schemes' ? 'font-bold text-dark-green border-b-2 border-dark-green pb-1' : ''}`}
+          >
+            Schemes
+          </a>
           <a href="#" className="hover:text-primary-green">Videos</a>
           <a href="#" className="hover:text-primary-green">Programs</a>
           <a href="#" className="hover:text-primary-green">More</a>
