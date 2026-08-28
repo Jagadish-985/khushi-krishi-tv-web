@@ -1,17 +1,37 @@
+'use client';
+
+import { usePathname } from 'next/navigation';
+
 export default function Header() {
+  const pathname = usePathname();
+
   return (
     <header className="bg-white border-b border-gray-200">
       <div className="mx-[64px] py-4 flex items-center justify-between">
         <div className="flex items-center gap-3">
-          <div className="w-12 h-12 bg-primary-green rounded-lg"></div>
+          {/* Two dots logo */}
+          <div className="flex items-center gap-1">
+            <div className="w-3 h-3 bg-dark-green rounded-full"></div>
+            <div className="w-3 h-3 bg-lime rounded-full"></div>
+          </div>
           <div>
             <h1 className="text-xl font-bold text-primary-green">KUSHI KRISHI TV</h1>
-            <p className="text-xs text-gray-600">ಕೃಷಿ ಕೃಷಿ ಟಿವಿ</p>
+            <p className="text-xs text-gray-600">ಕೃಷಿ, ನುಡಿ ನುಡಿತ</p>
           </div>
         </div>
         <nav className="flex items-center gap-6 text-sm font-medium text-gray-700">
-          <a href="/" className="hover:text-primary-green">Home</a>
-          <a href="#" className="hover:text-primary-green">News</a>
+          <a
+            href="/"
+            className={`hover:text-primary-green ${pathname === '/' ? 'font-bold text-dark-green border-b-2 border-dark-green pb-1' : ''}`}
+          >
+            Home
+          </a>
+          <a
+            href="/news"
+            className={`hover:text-primary-green ${pathname === '/news' ? 'font-bold text-dark-green border-b-2 border-dark-green pb-1' : ''}`}
+          >
+            News
+          </a>
           <a href="#" className="hover:text-primary-green">Agriculture</a>
           <a href="#" className="hover:text-primary-green">Sandalwood</a>
           <a href="#" className="hover:text-primary-green">Market</a>
