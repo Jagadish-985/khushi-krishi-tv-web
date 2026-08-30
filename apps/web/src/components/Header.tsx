@@ -72,18 +72,18 @@ export default function Header() {
             </button>
             {isMoreDropdownOpen && (
               <div className="absolute top-full left-0 mt-2 w-56 bg-white rounded-lg shadow-lg border border-gray-200 py-2 z-50">
-                <a href="/more#about" onClick={() => setIsMoreDropdownOpen(false)} className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-primary-green">
-                  About
-                </a>
-                <a href="/more#terms" onClick={() => setIsMoreDropdownOpen(false)} className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-primary-green">
-                  Terms and Conditions
-                </a>
-                <a href="/more#privacy" onClick={() => setIsMoreDropdownOpen(false)} className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-primary-green">
-                  Privacy Policy
-                </a>
-                <a href="/more#contact" onClick={() => setIsMoreDropdownOpen(false)} className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-primary-green">
-                  Contact Us
-                </a>
+               <a href="/about" onClick={() => setIsMoreDropdownOpen(false)} className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-primary-green">
+  About
+</a>
+<a href="/terms" onClick={() => setIsMoreDropdownOpen(false)} className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-primary-green">
+  Terms and Conditions
+</a>
+<a href="/privacy" onClick={() => setIsMoreDropdownOpen(false)} className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-primary-green">
+  Privacy Policy
+</a>
+<a href="/contact" onClick={() => setIsMoreDropdownOpen(false)} className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-primary-green">
+  Contact Us
+</a>
               </div>
             )}
           </div>
