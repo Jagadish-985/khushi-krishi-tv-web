@@ -37,7 +37,7 @@ export default function Header() {
             <p className="text-xs text-gray-600">ಕೃಷಿ, ನುಡಿ ನುಡಿತ</p>
           </div>
         </div>
-        <nav className="flex items-center gap-6 text-sm font-medium text-gray-700">
+        <nav className="hidden lg:flex items-center gap-6 text-sm font-medium text-gray-700">
           <a href="/" className={linkClass(pathname === '/')}>
             Home
           </a>

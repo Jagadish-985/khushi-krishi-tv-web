@@ -28,7 +28,7 @@ export default async function SchemesPage() {
         {schemes.length === 0 ? (
           <p className="text-gray-500">No schemes published yet.</p>
         ) : (
-          <div className="grid grid-cols-3 gap-[24px] mb-12">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-[24px] mb-12">
             {schemes.map((scheme, index) => (
               <div key={scheme.id} className="bg-white rounded-lg p-6 border border-gray-100 hover:shadow-lg transition-shadow">
                 <div className="flex items-center gap-3 mb-3">

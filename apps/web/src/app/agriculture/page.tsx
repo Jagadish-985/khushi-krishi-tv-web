@@ -76,7 +76,7 @@ export default async function AgriculturePage() {
         {/* Latest Agriculture Stories */}
         <div className="mb-12">
           <h2 className="text-[30px] font-bold text-gray-900 mb-6">Latest Agriculture Stories</h2>
-          <div className="grid grid-cols-4 gap-[24px]">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-[24px]">
             {latestStories.map((article) => (
               <Link
                 key={article.id}
@@ -100,7 +100,7 @@ export default async function AgriculturePage() {
         {/* Crop Guides */}
         <div className="mb-12">
           <h2 className="text-[30px] font-bold text-gray-900 mb-6">Crop Guides</h2>
-          <div className="grid grid-cols-3 gap-[24px]">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-[24px]">
             {cropGuides.map((crop) => (
               <div
                 key={crop.num}

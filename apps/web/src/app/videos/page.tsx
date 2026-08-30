@@ -45,7 +45,7 @@ export default async function VideosPage({ searchParams }: { searchParams: Promi
             <p className="text-gray-500 text-lg">No videos in this category yet.</p>
           </div>
         ) : (
-          <div className="grid grid-cols-4 gap-[24px] mb-12">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-[24px] mb-12">
             {videos.map((video) => (
               <Link key={video.slug} href={`/videos/${video.slug}`} className="bg-white rounded-lg overflow-hidden hover:shadow-lg transition-shadow border border-gray-100">
                 <div className="relative bg-[#C8DCC9] aspect-video flex items-center justify-center">

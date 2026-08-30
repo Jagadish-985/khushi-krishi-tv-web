@@ -85,7 +85,7 @@ export default async function SandalwoodPage() {
         </div>
 
         {/* Three-column info cards */}
-        <div className="grid grid-cols-3 gap-[24px] mb-12">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-[24px] mb-12">
           {infoCards.map((card) => (
             <div
               key={card.title}

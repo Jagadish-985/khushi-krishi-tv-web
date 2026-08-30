@@ -54,7 +54,7 @@ export default async function Home() {
       )}
 
       {/* Hero + Sidebar Section */}
-      <div className="mx-[64px] mt-6 grid grid-cols-3 gap-6">
+      <div className="mx-[64px] mt-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
         {/* Left: Hero + Top Story */}
         <div className="col-span-2 space-y-6">
           {/* Hero Image Placeholder */}
@@ -99,7 +99,7 @@ export default async function Home() {
 
       {/* Category Shortcuts Row */}
       <div className="mx-[64px] mt-6">
-        <div className="grid grid-cols-5 gap-[24px]">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-[24px]">
           {[
             { num: '1', title: 'Agriculture', desc: 'Latest farming techniques', href: '/news?category=Agriculture' },
             { num: '2', title: 'Sandalwood', desc: 'Cultivation & market', href: '/news?category=Sandalwood' },
@@ -124,7 +124,7 @@ export default async function Home() {
           <h2 className="text-3xl font-bold text-gray-900 mb-2">Featured Videos</h2>
           <p className="text-gray-600">Expert insights and educational content</p>
         </div>
-        <div className="grid grid-cols-4 gap-[24px]">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-[24px]">
           {[1, 2, 3, 4].map((i) => (
             <div key={i} className="bg-white rounded-lg overflow-hidden">
               <div className="w-full h-48 bg-gray-300"></div>
