@@ -52,7 +52,7 @@ export default function MarketPage() {
         </div>
 
         {/* Today's Market Snapshot Banner */}
-        <div className="bg-dark-green rounded-lg p-8 mb-12">
+        <div className="bg-dark-green rounded-xl p-8 mb-12">
           <div className="flex items-center justify-between">
             <div>
               <h2 className="text-[24px] font-bold text-white mb-4">Today&apos;s Market Snapshot</h2>
@@ -77,7 +77,7 @@ export default function MarketPage() {
         <div className="mb-12">
           <h2 className="text-[30px] font-bold text-gray-900 mb-6">Mandi Prices</h2>
 
-          <div className="bg-white rounded-lg overflow-hidden border border-gray-100">
+          <div className="bg-white rounded-xl soft-card card-hover overflow-hidden border border-gray-100">
             <table className="w-full">
               <thead>
                 <tr className="border-b border-gray-200 bg-gray-50">

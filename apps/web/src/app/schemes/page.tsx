@@ -26,11 +26,13 @@ export default async function SchemesPage() {
         </div>
 
         {schemes.length === 0 ? (
-          <p className="text-gray-500">No schemes published yet.</p>
+          <div className="bg-white soft-card rounded-xl p-12 text-center">
+            <p className="text-gray-400 text-lg">No schemes published yet.</p>
+          </div>
         ) : (
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-[24px] mb-12">
             {schemes.map((scheme, index) => (
-              <div key={scheme.id} className="bg-white rounded-lg p-6 border border-gray-100 hover:shadow-lg transition-shadow">
+              <div key={scheme.id} className="bg-white rounded-xl soft-card card-hover p-6 border border-gray-100 hover:shadow-lg transition-shadow">
                 <div className="flex items-center gap-3 mb-3">
                   <div className="w-10 h-10 bg-dark-green text-white rounded-full flex items-center justify-center font-bold text-sm flex-shrink-0">
                     {index + 1}

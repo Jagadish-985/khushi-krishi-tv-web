@@ -85,11 +85,11 @@ export default async function SearchPage({ searchParams }: PageProps) {
               name="q"
               defaultValue={query}
               placeholder="Search articles..."
-              className="flex-1 px-4 py-3 text-[16px] border border-gray-300 rounded-lg focus:outline-none focus:border-dark-green"
+              className="flex-1 px-4 py-3 text-[16px] border border-gray-300 rounded-xl focus:outline-none focus:border-dark-green"
             />
             <button
               type="submit"
-              className="px-8 py-3 text-sm font-bold text-white bg-dark-green rounded-lg hover:bg-primary-green transition-colors"
+              className="px-8 py-3 text-sm font-bold text-white bg-dark-green rounded-xl hover:bg-primary-green transition-colors"
             >
               Search
             </button>
@@ -129,7 +129,7 @@ export default async function SearchPage({ searchParams }: PageProps) {
                 <Link
                   key={article.id}
                   href={`/articles/${article.slug}`}
-                  className="bg-white rounded-lg overflow-hidden hover:shadow-lg transition-shadow border border-gray-100 block"
+                  className="bg-white rounded-xl soft-card card-hover overflow-hidden hover:shadow-lg transition-shadow border border-gray-100 block"
                 >
                   <div className="flex gap-4 p-[12px]">
                     {/* Light green thumbnail with label */}
@@ -147,7 +147,7 @@ export default async function SearchPage({ searchParams }: PageProps) {
                       <p className="text-[14px] text-gray-500 mb-2">
                         {article.category} • {formattedDate}
                       </p>
-                      <span className="text-[14px] font-semibold text-dark-green hover:text-primary-green">
+                      <span className="text-[14px] font-semibold text-dark-green hover:text-primary-green hover:opacity-90">
                         Read more →
                       </span>
                     </div>
