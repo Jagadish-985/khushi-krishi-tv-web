@@ -15,4 +15,5 @@ public class MongoDbService
     public IMongoCollection<Scheme> Schemes => _database.GetCollection<Scheme>("Schemes");
     public IMongoCollection<Video> Videos => _database.GetCollection<Video>("Videos");
     public IMongoCollection<ShowProgram> Programs => _database.GetCollection<ShowProgram>("Programs");
+    public IMongoCollection<SiteSettings> Settings => _database.GetCollection<SiteSettings>("SiteSettings");
 }
