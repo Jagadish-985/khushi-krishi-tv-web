@@ -51,7 +51,7 @@ export default function Header() {
   ];
 
   return (
-    <header className="bg-white border-b border-gray-200 relative">
+    <header className="bg-white border-b border-gray-200 relative sticky top-0 z-40 shadow-sm">
       <div className="mx-4 sm:mx-8 lg:mx-[64px] py-3 sm:py-4 flex items-center justify-between">
         <a href="/" className="flex items-center gap-2 sm:gap-3">
           <div className="flex items-center gap-1">

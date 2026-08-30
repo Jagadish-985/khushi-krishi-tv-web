@@ -53,7 +53,7 @@ export default async function VideoDetailPage({ params }: PageProps) {
         <div className="grid grid-cols-12 gap-[24px] mb-12">
           {/* Left Column - Video Player */}
           <div className="col-span-8">
-            <div className="relative bg-[#C8DCC9] rounded-lg overflow-hidden aspect-video flex items-center justify-center">
+            <div className="relative bg-gradient-to-br from-[#C8DCC9] to-[#9FC4A2] rounded-xl overflow-hidden aspect-video flex items-center justify-center">
               {/* Play Button Icon */}
               <div className="w-20 h-20 bg-dark-green rounded-full flex items-center justify-center mb-8">
                 <svg
@@ -86,7 +86,7 @@ export default async function VideoDetailPage({ params }: PageProps) {
 
           {/* Right Column - More Videos Sidebar */}
           <div className="col-span-4">
-            <div className="bg-white rounded-lg p-6 border border-gray-100">
+            <div className="bg-white rounded-xl soft-card card-hover p-6 border border-gray-100">
               <h3 className="text-[18px] font-bold text-gray-900 mb-4">More Videos</h3>
               <div className="space-y-4">
                 {otherVideos.map((otherVideo) => (
@@ -96,7 +96,7 @@ export default async function VideoDetailPage({ params }: PageProps) {
                     className="flex gap-3 hover:bg-gray-50 rounded transition-colors p-2 -m-2"
                   >
                     {/* Small Thumbnail */}
-                    <div className="w-24 h-16 bg-[#C8DCC9] rounded flex-shrink-0 flex items-center justify-center">
+                    <div className="w-24 h-16 bg-gradient-to-br from-[#C8DCC9] to-[#9FC4A2] rounded flex-shrink-0 flex items-center justify-center">
                       <div className="w-8 h-8 bg-dark-green rounded-full flex items-center justify-center">
                         <svg
                           className="w-4 h-4 text-white ml-0.5"

@@ -41,14 +41,14 @@ export default async function VideosPage({ searchParams }: { searchParams: Promi
         </div>
 
         {videos.length === 0 ? (
-          <div className="bg-white rounded-lg p-12 text-center">
+          <div className="bg-white rounded-xl soft-card card-hover p-12 text-center">
             <p className="text-gray-500 text-lg">No videos in this category yet.</p>
           </div>
         ) : (
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-[24px] mb-12">
             {videos.map((video) => (
-              <Link key={video.slug} href={`/videos/${video.slug}`} className="bg-white rounded-lg overflow-hidden hover:shadow-lg transition-shadow border border-gray-100">
-                <div className="relative bg-[#C8DCC9] aspect-video flex items-center justify-center">
+              <Link key={video.slug} href={`/videos/${video.slug}`} className="bg-white rounded-xl soft-card card-hover overflow-hidden hover:shadow-lg transition-shadow border border-gray-100">
+                <div className="relative bg-gradient-to-br from-[#C8DCC9] to-[#9FC4A2] aspect-video flex items-center justify-center">
                   <div className="w-16 h-16 bg-dark-green rounded-full flex items-center justify-center">
                     <svg className="w-8 h-8 text-white ml-1" fill="currentColor" viewBox="0 0 24 24">
                       <path d="M8 5v14l11-7z" />

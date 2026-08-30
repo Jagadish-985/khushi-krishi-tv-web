@@ -163,7 +163,7 @@ function ManagePanel({ type }: { type: ContentType }) {
 
   return (
     <div>
-      <form onSubmit={handleSubmit} className="bg-white p-6 rounded-lg shadow-sm mb-10 max-w-2xl">
+      <form onSubmit={handleSubmit} className="bg-white p-6 rounded-xl shadow-sm soft-card mb-10 max-w-2xl">
         <h2 className="font-semibold mb-4 text-gray-900">
           {editingId ? `Edit ${type.label.slice(0, -1)}` : `Add New ${type.label.slice(0, -1)}`}
         </h2>
@@ -271,7 +271,7 @@ function SettingsPanel() {
   }
 
   return (
-    <form onSubmit={handleSave} className="bg-white p-6 rounded-lg shadow-sm max-w-2xl">
+    <form onSubmit={handleSave} className="bg-white p-6 rounded-xl shadow-sm soft-card max-w-2xl">
       <h2 className="font-semibold mb-4 text-gray-900">Site Settings</h2>
 
       <label className="block text-sm text-gray-700 mb-1">Site Name</label>
@@ -337,8 +337,8 @@ export default function AdminPage() {
   if (!loggedIn) {
     return (
       <div className="min-h-screen flex items-center justify-center bg-[#F8FAF8]">
-        <form onSubmit={handleLogin} className="bg-white p-8 rounded-lg shadow-md w-80">
-          <h1 className="text-xl font-bold mb-4 text-gray-900">Admin Login</h1>
+        <form onSubmit={handleLogin} className="bg-white p-8 rounded-xl shadow-md soft-card w-80">
+          <h1 className="text-xl sm:text-2xl font-bold tracking-tight mb-4 text-gray-900">Admin Login</h1>
 
           <input
             type="password"
@@ -360,7 +360,7 @@ export default function AdminPage() {
 
   return (
     <div className="min-h-screen bg-[#F8FAF8] px-4 sm:px-8 py-6 sm:py-8 lg:py-10">
-      <h1 className="text-xl sm:text-2xl font-bold mb-6 text-gray-900">KKTV Admin — Content Management</h1>
+      <h1 className="text-xl sm:text-2xl font-bold tracking-tight mb-6 text-gray-900">KKTV Admin — Content Management</h1>
 
       <div className="flex gap-2 mb-8">
         {CONTENT_TYPES.map((t) => (

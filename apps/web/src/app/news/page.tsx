@@ -95,7 +95,7 @@ export default async function NewsPage({ searchParams }: NewsPageProps) {
 
         {/* Articles Grid or Empty State */}
         {articles.length === 0 ? (
-          <div className="bg-white rounded-lg p-12 text-center">
+          <div className="bg-white rounded-xl soft-card card-hover p-12 text-center">
             <p className="text-gray-500 text-lg">No articles in this category yet.</p>
           </div>
         ) : (
@@ -113,7 +113,7 @@ export default async function NewsPage({ searchParams }: NewsPageProps) {
                 <Link
                   key={article.id}
                   href={`/articles/${article.slug}`}
-                  className="bg-white rounded-lg overflow-hidden hover:shadow-lg transition-shadow border border-gray-100"
+                  className="bg-white rounded-xl soft-card card-hover overflow-hidden hover:shadow-lg transition-shadow border border-gray-100"
                 >
                   <div className="flex gap-4 p-[12px]">
                     {/* Light green thumbnail with label */}

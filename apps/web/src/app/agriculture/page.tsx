@@ -58,7 +58,7 @@ export default async function AgriculturePage() {
         </div>
 
         {/* Hero Banner */}
-        <div className="relative bg-[#C8DCC9] rounded-lg p-12 mb-12 overflow-hidden">
+        <div className="relative bg-gradient-to-br from-[#C8DCC9] to-[#9FC4A2] rounded-xl p-12 mb-12 overflow-hidden">
           <div className="relative z-10">
             <h2 className="text-[40px] font-bold text-dark-green mb-4 max-w-2xl">
               Farming Knowledge That Works on the Ground
@@ -81,7 +81,7 @@ export default async function AgriculturePage() {
               <Link
                 key={article.id}
                 href={`/articles/${article.slug}`}
-                className="bg-white rounded-lg p-6 hover:shadow-lg transition-shadow border border-gray-100"
+                className="bg-white rounded-xl soft-card card-hover p-6 hover:shadow-lg transition-shadow border border-gray-100"
               >
                 <span className="inline-block px-3 py-1 mb-3 text-xs font-bold bg-dark-green text-white rounded-full">
                   GUIDE
@@ -104,7 +104,7 @@ export default async function AgriculturePage() {
             {cropGuides.map((crop) => (
               <div
                 key={crop.num}
-                className="bg-white rounded-lg p-6 border border-gray-100 hover:border-primary-green transition-colors cursor-pointer"
+                className="bg-white rounded-xl soft-card card-hover p-6 border border-gray-100 hover:border-primary-green transition-colors cursor-pointer"
               >
                 <div className="flex items-start gap-4">
                   <div className="w-12 h-12 bg-dark-green text-white rounded-full flex items-center justify-center font-bold text-lg flex-shrink-0">

@@ -58,27 +58,27 @@ export default async function Home() {
         {/* Left: Hero + Top Story */}
         <div className="col-span-2 space-y-6">
           {/* Hero Image Placeholder */}
-          <div className="w-full h-[400px] bg-gray-300 rounded-lg"></div>
+          <div className="w-full h-[400px] bg-gray-300 rounded-xl"></div>
 
           {/* Top Story Card */}
-          <div className="bg-dark-green text-white p-[12px] rounded-lg">
+          <div className="bg-gradient-to-br from-primary-green to-dark-green text-white p-6 sm:p-8 rounded-xl shadow-lg">
             <span className="inline-block px-3 py-1 mb-3 text-xs font-bold bg-bright-green text-white rounded-full">
               TOP STORY
             </span>
-            <h2 className="text-xl sm:text-2xl font-bold mb-2">{topStory?.title}</h2>
+            <h2 className="text-xl sm:text-2xl font-bold tracking-tight mb-2">{topStory?.title}</h2>
             <p className="text-gray-200 mb-4 line-clamp-2">
               {topStory?.body.substring(0, 150)}...
             </p>
-            <button className="px-4 py-2 text-sm font-semibold text-dark-green bg-white rounded-lg hover:bg-gray-100">
+            <button className="px-4 py-2 text-sm font-semibold text-dark-green bg-white rounded-xl hover:bg-gray-100">
               Read Full Story →
             </button>
           </div>
         </div>
 
         {/* Right: Latest News Sidebar */}
-        <div className="bg-white p-[12px] rounded-lg h-fit">
+        <div className="bg-white p-[12px] rounded-xl h-fit">
           <div className="flex items-center justify-between mb-4">
-            <h3 className="text-lg font-bold text-gray-900">Latest News</h3>
+            <h3 className="text-lg font-bold tracking-tight text-gray-900">Latest News</h3>
             <a href="/news" className="text-sm font-medium text-primary-green hover:underline">
               View All
             </a>
@@ -107,7 +107,7 @@ export default async function Home() {
             { num: '4', title: 'Government Schemes', desc: 'Farmer welfare programs', href: '/news?category=Schemes' },
             { num: '5', title: 'Videos', desc: 'Educational content', href: '/news?category=Videos' },
           ].map((cat) => (
-            <a key={cat.num} href={cat.href} className="bg-white p-[12px] rounded-lg border border-gray-200 hover:border-primary-green cursor-pointer block">
+            <a key={cat.num} href={cat.href} className="bg-white p-[12px] rounded-xl border border-gray-200 hover:border-primary-green cursor-pointer block">
               <div className="w-8 h-8 bg-primary-green text-white rounded-full flex items-center justify-center font-bold mb-2">
                 {cat.num}
               </div>
@@ -121,12 +121,12 @@ export default async function Home() {
       {/* Featured Videos Section */}
       <div className="mx-[64px] mt-12 mb-12">
         <div className="mb-6">
-          <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-2">Featured Videos</h2>
+          <h2 className="text-2xl sm:text-3xl font-bold tracking-tight text-gray-900 mb-2">Featured Videos</h2>
           <p className="text-gray-600">Expert insights and educational content</p>
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-[24px]">
           {[1, 2, 3, 4].map((i) => (
-            <div key={i} className="bg-white rounded-lg overflow-hidden">
+            <div key={i} className="bg-white rounded-xl overflow-hidden">
               <div className="w-full h-48 bg-gray-300"></div>
               <div className="p-[12px]">
                 <h4 className="font-semibold text-gray-900 mb-1">Video Title {i}</h4>
