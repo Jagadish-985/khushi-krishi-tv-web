@@ -359,8 +359,8 @@ export default function AdminPage() {
   }
 
   return (
-    <div className="min-h-screen bg-[#F8FAF8] px-8 py-10">
-      <h1 className="text-2xl font-bold mb-6 text-gray-900">KKTV Admin — Content Management</h1>
+    <div className="min-h-screen bg-[#F8FAF8] px-4 sm:px-8 py-6 sm:py-8 lg:py-10">
+      <h1 className="text-xl sm:text-2xl font-bold mb-6 text-gray-900">KKTV Admin — Content Management</h1>
 
       <div className="flex gap-2 mb-8">
         {CONTENT_TYPES.map((t) => (

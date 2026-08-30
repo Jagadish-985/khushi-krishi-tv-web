@@ -7,11 +7,11 @@ export default function ContactPage() {
   return (
     <div className="bg-background min-h-screen">
       <Header />
-      <main className="px-16 py-10">
-        <h1 className="text-3xl font-bold">Contact Us</h1>
+      <main className="px-4 sm:px-8 lg:px-16 py-6 sm:py-8 lg:py-10">
+        <h1 className="text-2xl sm:text-3xl font-bold">Contact Us</h1>
         <p className="text-gray-500 mt-1 mb-6">Reach the Kushi Krishi TV team</p>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 items-start">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6 items-start">
           <div className="bg-white rounded-lg p-6">
             <h2 className="font-bold text-lg mb-4">Send us a message</h2>
             {/* Placeholder form — does not submit anywhere yet. No backend endpoint exists for this. */}

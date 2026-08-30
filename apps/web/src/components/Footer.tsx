@@ -4,7 +4,7 @@ export default function Footer() {
   return (
     <footer className="bg-dark-green text-white">
       <div className="mx-[64px] py-8">
-        <div className="grid grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-8">
           <div>
             <h3 className="text-xl font-bold mb-2">KUSHI KRISHI TV</h3>
             <p className="text-sm text-gray-300 mb-3">Your trusted source for agricultural news</p>
