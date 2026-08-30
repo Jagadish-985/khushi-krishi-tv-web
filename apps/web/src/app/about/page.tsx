@@ -5,12 +5,12 @@ export default function AboutPage() {
   return (
     <div className="bg-background min-h-screen">
       <Header />
-      <main className="px-16 py-10">
-        <h1 className="text-3xl font-bold">About Kushi Krishi TV</h1>
+      <main className="px-4 sm:px-8 lg:px-16 py-6 sm:py-8 lg:py-10">
+        <h1 className="text-2xl sm:text-3xl font-bold">About Kushi Krishi TV</h1>
         <p className="text-gray-500 mt-1 mb-8">A trusted agriculture-first media platform for Karnataka</p>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 items-start">
-          <div className="bg-[#D9E8DD] h-80 rounded-lg flex items-center justify-center text-gray-600 text-center px-4">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6 lg:gap-8 items-start">
+          <div className="bg-[#D9E8DD] h-48 sm:h-64 lg:h-80 rounded-lg flex items-center justify-center text-gray-600 text-center px-4">
             Kushi Krishi TV newsroom / field team
           </div>
           <div>
@@ -37,8 +37,8 @@ export default function AboutPage() {
           </div>
         </div>
 
-        <h2 className="text-2xl font-bold mt-16 mb-6">Why Kushi Krishi TV</h2>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <h2 className="text-xl sm:text-2xl font-bold mt-16 mb-6">Why Kushi Krishi TV</h2>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
           <div className="bg-white rounded-lg p-6">
             <h3 className="font-bold">Field-first reporting</h3>
             <p className="text-gray-500 text-sm mt-2">Stories and information grounded in real farming communities.</p>

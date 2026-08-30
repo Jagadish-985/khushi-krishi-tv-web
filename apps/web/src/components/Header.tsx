@@ -9,13 +9,6 @@ function linkClass(isActive: boolean) {
   return 'hover:text-primary-green';
 }
 
-function mobileLinkClass(isActive: boolean) {
-  if (isActive) {
-    return 'block py-2 font-bold text-dark-green';
-  }
-  return 'block py-2 text-gray-700';
-}
-
 export default function Header() {
   const pathname = usePathname();
   const [isMoreDropdownOpen, setIsMoreDropdownOpen] = useState(false);
@@ -32,21 +25,46 @@ export default function Header() {
     return () => document.removeEventListener('mousedown', handleClickOutside);
   }, []);
 
+  // Lock page scroll while the mobile menu is open
+  useEffect(() => {
+    document.body.style.overflow = isMobileMenuOpen ? 'hidden' : '';
+    return () => { document.body.style.overflow = ''; };
+  }, [isMobileMenuOpen]);
+
+  const closeMobileMenu = () => setIsMobileMenuOpen(false);
+
+  const mobileLinks = [
+    { href: '/', label: 'Home' },
+    { href: '/search', label: 'Search' },
+    { href: '/news', label: 'News' },
+    { href: '/agriculture', label: 'Agriculture' },
+    { href: '/sandalwood', label: 'Sandalwood' },
+    { href: '/market', label: 'Market' },
+    { href: '/schemes', label: 'Schemes' },
+    { href: '/videos', label: 'Videos' },
+    { href: '/programs', label: 'Programs' },
+    { href: '/live', label: 'Live TV' },
+    { href: '/about', label: 'About' },
+    { href: '/terms', label: 'Terms and Conditions' },
+    { href: '/privacy', label: 'Privacy Policy' },
+    { href: '/contact', label: 'Contact Us' },
+  ];
+
   return (
-    <header className="bg-white border-b border-gray-200">
-      <div className="mx-4 sm:mx-8 lg:mx-[64px] py-4 flex items-center justify-between">
-        <a href="/" className="flex items-center gap-3">
+    <header className="bg-white border-b border-gray-200 relative">
+      <div className="mx-4 sm:mx-8 lg:mx-[64px] py-3 sm:py-4 flex items-center justify-between">
+        <a href="/" className="flex items-center gap-2 sm:gap-3">
           <div className="flex items-center gap-1">
-            <div className="w-3 h-3 bg-dark-green rounded-full"></div>
-            <div className="w-3 h-3 bg-lime rounded-full"></div>
+            <div className="w-2.5 h-2.5 sm:w-3 sm:h-3 bg-dark-green rounded-full"></div>
+            <div className="w-2.5 h-2.5 sm:w-3 sm:h-3 bg-lime rounded-full"></div>
           </div>
           <div>
-            <h1 className="text-xl font-bold text-primary-green">KUSHI KRISHI TV</h1>
-            <p className="text-xs text-gray-600">ಕೃಷಿ, ನುಡಿ ನುಡಿತ</p>
+            <h1 className="text-base sm:text-xl font-bold text-primary-green leading-tight">KUSHI KRISHI TV</h1>
+            <p className="text-[10px] sm:text-xs text-gray-600 leading-tight">ಕೃಷಿ, ನುಡಿ ನುಡಿತ</p>
           </div>
         </a>
 
-        {/* Desktop nav — hidden on small screens */}
+        {/* Desktop nav */}
         <nav className="hidden lg:flex items-center gap-6 text-sm font-medium text-gray-700">
           <a href="/" className={linkClass(pathname === '/')}>Home</a>
           <a href="/search" className={linkClass(pathname === '/search')}>Search</a>
@@ -59,7 +77,7 @@ export default function Header() {
           <a href="/programs" className={linkClass(pathname.startsWith('/programs'))}>Programs</a>
 
           <div className="relative" ref={moreDropdownRef}>
-            <button onClick={() => setIsMoreDropdownOpen(!isMoreDropdownOpen)} className={linkClass(pathname === '/about' || pathname === '/terms' || pathname === '/privacy' || pathname === '/contact')}>
+            <button onClick={() => setIsMoreDropdownOpen(!isMoreDropdownOpen)} className={linkClass(['/about', '/terms', '/privacy', '/contact'].includes(pathname))}>
               More
             </button>
             {isMoreDropdownOpen && (
@@ -73,44 +91,62 @@ export default function Header() {
           </div>
         </nav>
 
-        {/* Right side buttons — Kannada + Live TV stay visible always; hamburger only on small screens */}
         <div className="flex items-center gap-2 sm:gap-3">
           <button className="hidden sm:inline-block px-4 py-2 text-sm font-medium text-gray-700 border border-gray-300 rounded-lg hover:bg-gray-50">
             ಕನ್ನಡ
           </button>
-          <a href="/live" className="px-3 sm:px-4 py-2 text-sm font-bold text-white bg-live-blue rounded-lg hover:bg-blue-700">
+          <a href="/live" className="hidden sm:inline-block px-3 sm:px-4 py-2 text-sm font-bold text-white bg-live-blue rounded-lg hover:bg-blue-700">
             LIVE TV
           </a>
 
-          {/* Hamburger button — only shows on small/medium screens */}
+          {/* Hamburger — only on small/medium screens */}
           <button
-            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            className="lg:hidden p-2 border border-gray-300 rounded-lg"
+            onClick={() => setIsMobileMenuOpen(true)}
+            className="lg:hidden p-2 border border-gray-300 rounded-lg text-xl leading-none"
             aria-label="Open menu"
           >
-            {isMobileMenuOpen ? '✕' : '☰'}
+            ☰
           </button>
         </div>
       </div>
 
-      {/* Mobile dropdown menu — only shows when hamburger is clicked, only on small/medium screens */}
+      {/* Mobile menu overlay + centered panel */}
       {isMobileMenuOpen && (
-        <nav className="lg:hidden border-t border-gray-200 px-4 py-3 bg-white">
-          <a href="/" className={mobileLinkClass(pathname === '/')}>Home</a>
-          <a href="/search" className={mobileLinkClass(pathname === '/search')}>Search</a>
-          <a href="/news" className={mobileLinkClass(pathname === '/news')}>News</a>
-          <a href="/agriculture" className={mobileLinkClass(pathname === '/agriculture')}>Agriculture</a>
-          <a href="/sandalwood" className={mobileLinkClass(pathname === '/sandalwood')}>Sandalwood</a>
-          <a href="/market" className={mobileLinkClass(pathname === '/market')}>Market</a>
-          <a href="/schemes" className={mobileLinkClass(pathname === '/schemes')}>Schemes</a>
-          <a href="/videos" className={mobileLinkClass(pathname.startsWith('/videos'))}>Videos</a>
-          <a href="/programs" className={mobileLinkClass(pathname.startsWith('/programs'))}>Programs</a>
-          <a href="/about" className={mobileLinkClass(pathname === '/about')}>About</a>
-          <a href="/terms" className={mobileLinkClass(pathname === '/terms')}>Terms and Conditions</a>
-          <a href="/privacy" className={mobileLinkClass(pathname === '/privacy')}>Privacy Policy</a>
-          <a href="/contact" className={mobileLinkClass(pathname === '/contact')}>Contact Us</a>
-          <button className="block w-full text-left py-2 text-gray-700">ಕನ್ನಡ</button>
-        </nav>
+        <div className="fixed inset-0 z-50 lg:hidden">
+          {/* Dark backdrop — tapping it closes the menu */}
+          <div className="absolute inset-0 bg-black/40" onClick={closeMobileMenu}></div>
+
+          {/* Menu panel */}
+          <div className="absolute top-0 right-0 h-full w-[80%] max-w-sm bg-white shadow-xl flex flex-col">
+            <div className="flex items-center justify-between px-5 py-4 border-b border-gray-200">
+              <span className="font-bold text-primary-green">Menu</span>
+              <button onClick={closeMobileMenu} className="p-2 text-xl leading-none" aria-label="Close menu">✕</button>
+            </div>
+
+            <nav className="flex-1 overflow-y-auto px-5 py-4">
+              {mobileLinks.map((link) => (
+                <a
+                  key={link.href}
+                  href={link.href}
+                  onClick={closeMobileMenu}
+                  className={
+                    pathname === link.href
+                      ? 'block text-center py-3 text-base font-bold text-primary-green border-b border-gray-100'
+                      : 'block text-center py-3 text-base text-gray-700 border-b border-gray-100'
+                  }
+                >
+                  {link.label}
+                </a>
+              ))}
+            </nav>
+
+            <div className="px-5 py-4 border-t border-gray-200">
+              <button className="w-full py-2.5 text-sm font-medium text-gray-700 border border-gray-300 rounded-lg">
+                ಕನ್ನಡ
+              </button>
+            </div>
+          </div>
+        </div>
       )}
     </header>
   );

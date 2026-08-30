@@ -54,7 +54,7 @@ export default async function Home() {
       )}
 
       {/* Hero + Sidebar Section */}
-      <div className="mx-[64px] mt-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div className="mx-[64px] mt-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
         {/* Left: Hero + Top Story */}
         <div className="col-span-2 space-y-6">
           {/* Hero Image Placeholder */}
@@ -65,7 +65,7 @@ export default async function Home() {
             <span className="inline-block px-3 py-1 mb-3 text-xs font-bold bg-bright-green text-white rounded-full">
               TOP STORY
             </span>
-            <h2 className="text-2xl font-bold mb-2">{topStory?.title}</h2>
+            <h2 className="text-xl sm:text-2xl font-bold mb-2">{topStory?.title}</h2>
             <p className="text-gray-200 mb-4 line-clamp-2">
               {topStory?.body.substring(0, 150)}...
             </p>
@@ -121,7 +121,7 @@ export default async function Home() {
       {/* Featured Videos Section */}
       <div className="mx-[64px] mt-12 mb-12">
         <div className="mb-6">
-          <h2 className="text-3xl font-bold text-gray-900 mb-2">Featured Videos</h2>
+          <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-2">Featured Videos</h2>
           <p className="text-gray-600">Expert insights and educational content</p>
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-[24px]">
