@@ -67,7 +67,7 @@ export default async function ProgramDetailPage({ params }: PageProps) {
               <p className="text-gray-500 text-lg">No episodes available yet.</p>
             </div>
           ) : (
-            <div className="grid grid-cols-3 gap-[24px]">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-[24px]">
               {episodes.map((episode) => (
                 <div
                   key={episode.number}

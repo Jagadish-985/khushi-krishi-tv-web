@@ -99,7 +99,7 @@ export default async function NewsPage({ searchParams }: NewsPageProps) {
             <p className="text-gray-500 text-lg">No articles in this category yet.</p>
           </div>
         ) : (
-          <div className="grid grid-cols-2 gap-[24px]">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-[24px]">
             {articles.map((article) => {
               const formattedDate = new Date(article.publishedAt).toLocaleDateString('en-US', {
                 month: 'long',

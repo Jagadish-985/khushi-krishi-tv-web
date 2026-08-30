@@ -29,7 +29,7 @@ export default async function ProgramsPage() {
         {programs.length === 0 ? (
           <p className="text-gray-500">No programs published yet.</p>
         ) : (
-          <div className="grid grid-cols-3 gap-[24px] mb-12">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-[24px] mb-12">
             {programs.map((program) => (
               <div key={program.slug} className="bg-white rounded-lg overflow-hidden border border-gray-100 hover:shadow-lg transition-shadow">
                 <div className="h-48 flex items-center justify-center relative" style={{ backgroundColor: colorMap[program.colorTheme] || '#075B3B' }}>

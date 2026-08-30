@@ -20,7 +20,7 @@ export default function AboutPage() {
             </p>
 
             <h2 className="font-bold text-lg mt-8">What we cover</h2>
-            <div className="grid grid-cols-2 gap-3 mt-3 max-w-sm">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mt-3 max-w-sm">
               <span className="border border-primary-green text-primary-green text-sm font-medium text-center px-4 py-2 rounded-full">
                 Agriculture
               </span>
@@ -38,7 +38,7 @@ export default function AboutPage() {
         </div>
 
         <h2 className="text-2xl font-bold mt-16 mb-6">Why Kushi Krishi TV</h2>
-        <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           <div className="bg-white rounded-lg p-6">
             <h3 className="font-bold">Field-first reporting</h3>
             <p className="text-gray-500 text-sm mt-2">Stories and information grounded in real farming communities.</p>
