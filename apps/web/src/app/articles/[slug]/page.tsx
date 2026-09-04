@@ -75,11 +75,11 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
     <div className="min-h-screen bg-bg-light">
       <Header />
 
-      <main className="mx-[64px] my-8">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8">
+      <main className="mx-4 sm:mx-8 lg:mx-[64px] my-8">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 lg:gap-8">
           {/* Main Content Column */}
-          <div className="col-span-2">
-            <article className="bg-white rounded-xl soft-card card-hover p-8">
+          <div className="lg:col-span-2">
+            <article className="bg-white rounded-2xl soft-card card-hover p-6 sm:p-8 border border-gray-100">
               {/* Category Badge */}
               <div className="mb-4">
                 <span className="inline-block px-3 py-1 text-sm font-semibold rounded-full bg-bright-green/10 text-dark-green">
@@ -109,7 +109,7 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
               </div>
 
               {/* Hero Image Placeholder */}
-              <div className="w-full h-[400px] bg-gray-300 rounded-xl mb-8"></div>
+              <div className="w-full h-[300px] sm:h-[400px] bg-gradient-to-br from-primary-green/20 to-lime/20 rounded-xl mb-8"></div>
 
               {/* Article Body */}
               <div className="prose prose-lg max-w-none">
@@ -142,7 +142,7 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
           <div className="space-y-6">
             {/* "In this story" Card - only show if tags exist */}
             {article.tags && article.tags.length > 0 && (
-              <div className="bg-white rounded-lg p-6">
+              <div className="bg-white rounded-2xl soft-card p-6 border border-gray-100">
                 <h3 className="text-lg font-bold tracking-tight text-gray-900 mb-4">In this story</h3>
                 <ul className="space-y-2">
                   {article.tags.map((tag) => (
@@ -158,7 +158,7 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
 
             {/* Related Articles */}
             {relatedArticles.length > 0 && (
-              <div className="bg-white rounded-lg p-6">
+              <div className="bg-white rounded-2xl soft-card p-6 border border-gray-100">
                 <h3 className="text-lg font-bold tracking-tight text-gray-900 mb-4">Related Articles</h3>
                 <div className="space-y-4">
                   {relatedArticles.map((related) => (

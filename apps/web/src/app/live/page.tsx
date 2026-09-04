@@ -29,20 +29,20 @@ export default function LivePage() {
     <div className="min-h-screen bg-bg-light">
       <Header />
 
-      <main className="mx-[64px] my-8">
+      <main className="mx-4 sm:mx-8 lg:mx-[64px] my-8">
         {/* Page Heading */}
         <div className="mb-8">
-          <h1 className="text-[30px] font-bold text-gray-900 mb-2">
+          <h1 className="text-2xl sm:text-[30px] font-bold text-gray-900 mb-2 tracking-tight">
             Kushi Krishi TV — Live
           </h1>
-          <p className="text-[14px] text-gray-600">Watch the channel live</p>
+          <p className="text-sm sm:text-[14px] text-gray-600">Watch the channel live</p>
         </div>
 
         {/* Two-column Layout */}
-        <div className="grid grid-cols-12 gap-[24px] mb-12">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-[24px] mb-12">
           {/* Left Column - Video Player Placeholder */}
-          <div className="col-span-8">
-            <div className="relative bg-black rounded-xl overflow-hidden aspect-video flex items-center justify-center">
+          <div className="lg:col-span-8">
+            <div className="relative bg-gradient-to-br from-gray-900 to-black rounded-xl overflow-hidden aspect-video flex items-center justify-center shadow-lg">
               {/* LIVE label - top left */}
               <div className="absolute top-4 left-4 bg-red-600 text-white text-xs font-bold px-2 py-1 rounded">
                 LIVE
@@ -67,8 +67,8 @@ export default function LivePage() {
           </div>
 
           {/* Right Column - Now & Next Sidebar */}
-          <div className="col-span-4">
-            <div className="bg-white rounded-xl soft-card card-hover p-6 border border-gray-100">
+          <div className="lg:col-span-4">
+            <div className="bg-white rounded-2xl soft-card card-hover p-6 border border-gray-100">
               <h3 className="text-[18px] font-bold text-gray-900 mb-6">
                 Now &amp; Next
               </h3>
@@ -107,7 +107,7 @@ export default function LivePage() {
               {/* View Programme Guide button */}
               <Link
                 href="/programs"
-                className="block w-full px-6 py-3 text-center text-sm font-bold text-white bg-dark-green rounded-xl hover:bg-primary-green transition-colors"
+                className="block w-full px-6 py-3 text-center text-sm font-bold text-white bg-dark-green rounded-xl hover:bg-primary-green transition-colors shadow-sm hover:shadow-md"
               >
                 View Programme Guide
               </Link>

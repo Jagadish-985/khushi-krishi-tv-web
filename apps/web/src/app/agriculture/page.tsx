@@ -48,19 +48,19 @@ export default async function AgriculturePage() {
     <div className="min-h-screen bg-bg-light">
       <Header />
 
-      <main className="mx-[64px] my-8">
+      <main className="mx-4 sm:mx-8 lg:mx-[64px] my-8">
         {/* Page Heading */}
         <div className="mb-8">
-          <h1 className="text-[30px] font-bold text-gray-900 mb-2">Agriculture</h1>
+          <h1 className="text-[30px] font-bold text-gray-900 mb-2 tracking-tight">Agriculture</h1>
           <p className="text-[14px] text-gray-600">
             Practical knowledge, crop guidance and stories from Karnataka farms
           </p>
         </div>
 
         {/* Hero Banner */}
-        <div className="relative bg-gradient-to-br from-[#C8DCC9] to-[#9FC4A2] rounded-xl p-12 mb-12 overflow-hidden">
+        <div className="relative bg-gradient-to-br from-[#C8DCC9] via-[#B3D3B7] to-[#9FC4A2] rounded-2xl p-12 mb-12 overflow-hidden">
           <div className="relative z-10">
-            <h2 className="text-[40px] font-bold text-dark-green mb-4 max-w-2xl">
+            <h2 className="text-3xl sm:text-4xl lg:text-[40px] font-bold text-dark-green mb-4 max-w-2xl tracking-tight">
               Farming Knowledge That Works on the Ground
             </h2>
             <p className="text-[18px] text-gray-700">
@@ -75,13 +75,13 @@ export default async function AgriculturePage() {
 
         {/* Latest Agriculture Stories */}
         <div className="mb-12">
-          <h2 className="text-[30px] font-bold text-gray-900 mb-6">Latest Agriculture Stories</h2>
+          <h2 className="text-[30px] font-bold text-gray-900 mb-6 tracking-tight">Latest Agriculture Stories</h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-[24px]">
             {latestStories.map((article) => (
               <Link
                 key={article.id}
                 href={`/articles/${article.slug}`}
-                className="bg-white rounded-xl soft-card card-hover p-6 hover:shadow-lg transition-shadow border border-gray-100"
+                className="bg-white rounded-2xl soft-card card-hover p-6 hover:shadow-lg transition-shadow border border-gray-100"
               >
                 <span className="inline-block px-3 py-1 mb-3 text-xs font-bold bg-dark-green text-white rounded-full">
                   GUIDE
@@ -99,12 +99,12 @@ export default async function AgriculturePage() {
 
         {/* Crop Guides */}
         <div className="mb-12">
-          <h2 className="text-[30px] font-bold text-gray-900 mb-6">Crop Guides</h2>
+          <h2 className="text-[30px] font-bold text-gray-900 mb-6 tracking-tight">Crop Guides</h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-[24px]">
             {cropGuides.map((crop) => (
               <div
                 key={crop.num}
-                className="bg-white rounded-xl soft-card card-hover p-6 border border-gray-100 hover:border-primary-green transition-colors cursor-pointer"
+                className="bg-white rounded-2xl soft-card card-hover p-6 border border-gray-100 hover:border-primary-green transition-colors cursor-pointer"
               >
                 <div className="flex items-start gap-4">
                   <div className="w-12 h-12 bg-dark-green text-white rounded-full flex items-center justify-center font-bold text-lg flex-shrink-0">

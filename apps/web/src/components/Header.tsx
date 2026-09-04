@@ -51,7 +51,7 @@ export default function Header() {
   ];
 
   return (
-    <header className="bg-white border-b border-gray-200 relative sticky top-0 z-40 shadow-sm">
+    <header className="bg-white/95 backdrop-blur-sm border-b border-gray-200/80 relative sticky top-0 z-40 shadow-[0_1px_3px_rgba(0,0,0,0.05)]">
       <div className="mx-4 sm:mx-8 lg:mx-[64px] py-3 sm:py-4 flex items-center justify-between">
         <a href="/" className="flex items-center gap-2 sm:gap-3">
           <div className="flex items-center gap-1">
@@ -81,7 +81,7 @@ export default function Header() {
               More
             </button>
             {isMoreDropdownOpen && (
-              <div className="absolute top-full left-0 mt-2 w-56 bg-white rounded-lg shadow-lg border border-gray-200 py-2 z-50">
+              <div className="absolute top-full left-0 mt-2 w-56 bg-white rounded-xl shadow-xl shadow-gray-200/50 border border-gray-100 py-2 z-50">
                 <a href="/about" onClick={() => setIsMoreDropdownOpen(false)} className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-primary-green">About</a>
                 <a href="/terms" onClick={() => setIsMoreDropdownOpen(false)} className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-primary-green">Terms and Conditions</a>
                 <a href="/privacy" onClick={() => setIsMoreDropdownOpen(false)} className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-primary-green">Privacy Policy</a>
@@ -92,17 +92,17 @@ export default function Header() {
         </nav>
 
         <div className="flex items-center gap-2 sm:gap-3">
-          <button className="hidden sm:inline-block px-4 py-2 text-sm font-medium text-gray-700 border border-gray-300 rounded-lg hover:bg-gray-50">
+          <button className="hidden sm:inline-block px-4 py-2 text-sm font-medium text-gray-700 border border-gray-200 rounded-xl hover:bg-gray-50">
             ಕನ್ನಡ
           </button>
-          <a href="/live" className="hidden sm:inline-block px-3 sm:px-4 py-2 text-sm font-bold text-white bg-live-blue rounded-lg hover:bg-blue-700">
+          <a href="/live" className="hidden sm:inline-block px-3 sm:px-4 py-2 text-sm font-bold text-white bg-live-blue rounded-xl hover:bg-blue-700 shadow-sm hover:shadow-md">
             LIVE TV
           </a>
 
           {/* Hamburger — only on small/medium screens */}
           <button
             onClick={() => setIsMobileMenuOpen(true)}
-            className="lg:hidden p-2 border border-gray-300 rounded-lg text-xl leading-none"
+            className="lg:hidden p-2 border border-gray-200 rounded-xl text-xl leading-none hover:bg-gray-50"
             aria-label="Open menu"
           >
             ☰
@@ -117,7 +117,7 @@ export default function Header() {
           <div className="absolute inset-0 bg-black/40" onClick={closeMobileMenu}></div>
 
           {/* Menu panel */}
-          <div className="absolute top-0 right-0 h-full w-[80%] max-w-sm bg-white shadow-xl flex flex-col">
+          <div className="absolute top-0 right-0 h-full w-[80%] max-w-sm bg-white shadow-2xl flex flex-col">
             <div className="flex items-center justify-between px-5 py-4 border-b border-gray-200">
               <span className="font-bold text-primary-green">Menu</span>
               <button onClick={closeMobileMenu} className="p-2 text-xl leading-none" aria-label="Close menu">✕</button>

@@ -17,16 +17,17 @@ export default function NotFound() {
 
       <main className="flex-1 flex items-center justify-center">
         <div className="text-center px-8">
-          <h1 className="text-[72px] font-bold text-dark-green mb-4">404</h1>
-          <h2 className="text-[28px] font-bold text-gray-900 mb-3">
+          <div className="text-6xl mb-4">🌿</div>
+          <h1 className="text-[96px] font-bold text-dark-green/20 mb-2 leading-none">404</h1>
+          <h2 className="text-2xl sm:text-[28px] font-bold text-gray-900 mb-3 tracking-tight">
             Page not found
           </h2>
-          <p className="text-[16px] text-gray-600 mb-8 max-w-md mx-auto">
+          <p className="text-sm sm:text-[16px] text-gray-600 mb-8 max-w-md mx-auto">
             The page you are looking for may have moved or no longer exists.
           </p>
           <Link
             href="/"
-            className="inline-block px-8 py-3 text-sm font-bold text-white bg-dark-green rounded-xl hover:bg-primary-green transition-colors"
+            className="inline-block px-8 py-3 text-sm font-bold text-white bg-dark-green rounded-xl hover:bg-primary-green transition-colors shadow-sm hover:shadow-md"
           >
             Back to Home
           </Link>

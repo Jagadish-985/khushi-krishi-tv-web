@@ -59,19 +59,19 @@ export default async function SandalwoodPage() {
     <div className="min-h-screen bg-bg-light">
       <Header />
 
-      <main className="mx-[64px] my-8">
+      <main className="mx-4 sm:mx-8 lg:mx-[64px] my-8">
         {/* Page Heading */}
         <div className="mb-8">
-          <h1 className="text-[30px] font-bold text-gray-900 mb-2">Sandalwood</h1>
+          <h1 className="text-[30px] font-bold text-gray-900 mb-2 tracking-tight">Sandalwood</h1>
           <p className="text-[14px] text-gray-600">
             Industry news, cultivation guidance, policy and market intelligence
           </p>
         </div>
 
         {/* Hero Banner */}
-        <div className="relative bg-gradient-to-br from-[#B08A52] to-[#8A6B3D] rounded-xl p-12 mb-12 overflow-hidden">
+        <div className="relative bg-gradient-to-br from-[#B08A52] via-[#9D7845] to-[#8A6B3D] rounded-2xl p-12 mb-12 overflow-hidden">
           <div className="relative z-10">
-            <h2 className="text-[40px] font-bold text-white mb-4 max-w-2xl">
+            <h2 className="text-3xl sm:text-4xl lg:text-[40px] font-bold text-white mb-4 max-w-2xl tracking-tight">
               Sandalwood: From Farm to Industry
             </h2>
             <p className="text-[18px] text-white/90">
@@ -89,7 +89,7 @@ export default async function SandalwoodPage() {
           {infoCards.map((card) => (
             <div
               key={card.title}
-              className="bg-white rounded-xl soft-card card-hover p-6 border border-gray-100"
+              className="bg-white rounded-2xl soft-card card-hover p-6 border border-gray-100"
             >
               <h3 className="text-[18px] font-bold text-gray-900 mb-2">{card.title}</h3>
               <p className="text-[14px] text-gray-600">{card.description}</p>
@@ -99,9 +99,9 @@ export default async function SandalwoodPage() {
 
         {/* Latest Sandalwood News */}
         <div className="mb-12">
-          <h2 className="text-[30px] font-bold text-gray-900 mb-6">Latest Sandalwood News</h2>
+          <h2 className="text-[30px] font-bold text-gray-900 mb-6 tracking-tight">Latest Sandalwood News</h2>
           {articles.length === 0 ? (
-            <div className="bg-white rounded-xl soft-card card-hover p-12 text-center">
+            <div className="bg-white rounded-2xl soft-card card-hover p-12 text-center border border-gray-100">
               <p className="text-gray-500 text-lg">No articles in this category yet.</p>
             </div>
           ) : (
@@ -119,7 +119,7 @@ export default async function SandalwoodPage() {
                   <Link
                     key={article.id}
                     href={`/articles/${article.slug}`}
-                    className="bg-white rounded-xl soft-card card-hover overflow-hidden hover:shadow-lg transition-shadow border border-gray-100 block"
+                    className="bg-white rounded-2xl soft-card card-hover overflow-hidden hover:shadow-lg transition-shadow border border-gray-100 block"
                   >
                     <div className="flex gap-4 p-[12px]">
                       {/* Tan/light-brown thumbnail with label */}
