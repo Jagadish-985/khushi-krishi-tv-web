@@ -68,11 +68,11 @@ export default async function SearchPage({ searchParams }: PageProps) {
     <div className="min-h-screen bg-bg-light">
       <Header />
 
-      <main className="mx-[64px] my-8">
+      <main className="mx-4 sm:mx-8 lg:mx-[64px] my-8">
         {/* Page Heading */}
         <div className="mb-8">
-          <h1 className="text-[30px] font-bold text-gray-900 mb-2">Search</h1>
-          <p className="text-[14px] text-gray-600">
+          <h1 className="text-2xl sm:text-3xl font-bold tracking-tight text-gray-900 mb-2">Search</h1>
+          <p className="text-sm text-gray-600">
             Find news, videos, programmes, schemes and guides
           </p>
         </div>
@@ -85,11 +85,11 @@ export default async function SearchPage({ searchParams }: PageProps) {
               name="q"
               defaultValue={query}
               placeholder="Search articles..."
-              className="flex-1 px-4 py-3 text-[16px] border border-gray-300 rounded-xl focus:outline-none focus:border-dark-green"
+              className="flex-1 px-4 py-3 text-[16px] text-gray-900 bg-white border border-gray-300 rounded-xl focus:outline-none focus:border-primary-green focus:ring-2 focus:ring-primary-green/20 placeholder:text-gray-400"
             />
             <button
               type="submit"
-              className="px-8 py-3 text-sm font-bold text-white bg-dark-green rounded-xl hover:bg-primary-green transition-colors"
+              className="px-8 py-3 text-sm font-bold text-white bg-dark-green rounded-xl hover:bg-primary-green transition-colors shadow-sm hover:shadow-md"
             >
               Search
             </button>
@@ -98,18 +98,20 @@ export default async function SearchPage({ searchParams }: PageProps) {
 
         {/* Results Count */}
         {query && (
-          <p className="text-[14px] text-gray-500 mb-6">
+          <p className="text-sm text-gray-500 mb-6">
             {results.length} {results.length === 1 ? 'result' : 'results'}
           </p>
         )}
 
         {/* Results or Empty States */}
         {!query ? (
-          <div className="bg-white rounded-lg p-12 text-center">
+          <div className="bg-white rounded-2xl soft-card p-12 text-center border border-gray-100">
+            <div className="text-5xl mb-4">🔍</div>
             <p className="text-gray-500 text-lg">Enter a search term above</p>
           </div>
         ) : results.length === 0 ? (
-          <div className="bg-white rounded-lg p-12 text-center">
+          <div className="bg-white rounded-2xl soft-card p-12 text-center border border-gray-100">
+            <div className="text-5xl mb-4">😔</div>
             <p className="text-gray-500 text-lg">
               No results found for &apos;{query}&apos;
             </p>
@@ -129,11 +131,11 @@ export default async function SearchPage({ searchParams }: PageProps) {
                 <Link
                   key={article.id}
                   href={`/articles/${article.slug}`}
-                  className="bg-white rounded-xl soft-card card-hover overflow-hidden hover:shadow-lg transition-shadow border border-gray-100 block"
+                  className="bg-white rounded-2xl soft-card card-hover overflow-hidden hover:shadow-lg transition-shadow border border-gray-100 block"
                 >
-                  <div className="flex gap-4 p-[12px]">
+                  <div className="flex gap-4 p-3">
                     {/* Light green thumbnail with label */}
-                    <div className="w-28 h-28 bg-[#D9E8DD] rounded flex-shrink-0 flex items-center justify-center">
+                    <div className="w-28 h-28 bg-[#D9E8DD] rounded shrink-0 flex items-center justify-center">
                       <span className="text-xs text-gray-600 text-center px-2 leading-tight">
                         {thumbnailLabel}
                       </span>
@@ -141,13 +143,13 @@ export default async function SearchPage({ searchParams }: PageProps) {
 
                     {/* Content */}
                     <div className="flex-1 flex flex-col justify-center">
-                      <h3 className="text-[18px] font-bold text-gray-900 mb-2 leading-tight">
+                      <h3 className="text-lg font-bold text-gray-900 mb-2 leading-tight">
                         {article.title}
                       </h3>
-                      <p className="text-[14px] text-gray-500 mb-2">
+                      <p className="text-sm text-gray-500 mb-2">
                         {article.category} • {formattedDate}
                       </p>
-                      <span className="text-[14px] font-semibold text-dark-green hover:text-primary-green hover:opacity-90">
+                      <span className="text-sm font-semibold text-dark-green hover:text-primary-green hover:opacity-90">
                         Read more →
                       </span>
                     </div>
